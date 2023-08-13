@@ -3,6 +3,7 @@ import Head from 'next/head'
 import ExtLink from './ext-link'
 import { useRouter } from 'next/router'
 import styles from '../styles/header.module.css'
+import Script from 'next/script'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Inicio', page: '/' },
@@ -23,11 +24,13 @@ const Header = ({
   return (
     <header className={styles.header}>
       <Head>
-        <script
+        <Script
+          data-ad-client="ca-pub-3730111662635989"
           async
+          strategy="lazyOnload"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3730111662635989"
           crossOrigin="anonymous"
-        ></script>
+        ></Script>
         <title>{titlePre ? titlePre : 'blog.cgsilva.com.br'}</title>
         <meta name="description" content={descPre} />
         <meta name="og:description" content={descPre} />
