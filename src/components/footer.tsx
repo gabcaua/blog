@@ -5,12 +5,7 @@ export default function Footer() {
       <footer>
         <span>Meu maior projeto.</span>
         <ExtLink href="https://cgsilva.com.br">
-          <img
-            src="/listen.svg"
-            height={46}
-            width={132}
-            alt="deploy to Vercel button"
-          />
+          <img src="/listen.svg" height={46} width={132} alt="blue button" />
         </ExtLink>
         <span>
           ou{' '}

@@ -11,7 +11,7 @@ const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Código-fonte', link: 'https://github.com/gabcaua/blog' },
 ]
 
-const ogImageUrl = '/og-image.png'
+const ogImageUrl = '/og-image.webp'
 
 const Header = ({ titlePre = '' }) => {
   const { pathname } = useRouter()
@@ -20,10 +20,9 @@ const Header = ({ titlePre = '' }) => {
     <header className={styles.header}>
       <Head>
         <title>{titlePre ? titlePre : 'blog.cgsilva.com.br'}</title>
-        <meta
-          name="description"
-          content="An example Next.js site using Notion for the blog"
-        />
+        <meta name="description" content="bem-vindo ao meu blogue." />
+        <meta name="og:description" content="bem-vindo ao meu blogue." />
+        <meta name="description" content="bem-vindo ao meu blogue." />
         <meta name="og:title" content="Oi, Mundo." />
         <meta property="og:image" content={ogImageUrl} />
         <meta name="twitter:site" content="@gab_caua" />
