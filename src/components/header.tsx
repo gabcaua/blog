@@ -33,6 +33,11 @@ const Header = ({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={image} />
         <meta name="theme-color" content={color} />
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="%PUBLIC_URL%/favicon.ico"
+        ></link>
       </Head>
       <ul>
         {navItems.map(({ label, page, link }) => (
