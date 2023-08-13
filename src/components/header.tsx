@@ -27,7 +27,7 @@ const Header = ({
         <Script
           data-ad-client="ca-pub-3730111662635989"
           async
-          strategy="lazyOnload"
+          strategy="beforeInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3730111662635989"
           crossOrigin="anonymous"
         ></Script>
