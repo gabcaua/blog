@@ -44,7 +44,12 @@ export default function Contact() {
       />
       <div className={sharedStyles.layout}>
         <div className={contactStyles.avatar}>
-          <img src="/logo.webp" alt="logo with letters CG" height={60} />
+          <img
+            src="/logo.svg"
+            alt="logo with letters CG"
+            height={60}
+            width={60}
+          />
         </div>
 
         <h1 style={{ marginTop: 0 }}>Contato</h1>

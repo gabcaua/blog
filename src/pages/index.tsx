@@ -8,7 +8,7 @@ export default function Index() {
     <>
       <Header titlePre="Início" />
       <div className={sharedStyles.layout}>
-        <img src="/logo.webp" height="85" width="85" alt="Foto conceitual." />
+        <img src="/logo.svg" height="85" width="85" alt="Foto conceitual." />
         <h1>Oi, Mundo.</h1>
         <h2>
           Meu diário. <br />{' '}
