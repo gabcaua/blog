@@ -7,9 +7,9 @@ import Script from 'next/script'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Inicio', page: '/' },
-  { label: 'Diário (Blog)', page: '/blog' },
+  { label: 'Blog', page: '/blog' },
   { label: 'Contato', page: '/contact' },
-  { label: 'Código-fonte', link: 'https://github.com/gabcaua/blog' },
+  { label: 'GitHub', link: 'https://github.com/gabcaua/blog' },
 ]
 
 const Header = ({
