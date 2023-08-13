@@ -53,8 +53,9 @@ const Index = ({ posts = [], preview }) => {
     <>
       <Header
         titlePre="Blog"
-        title="Blog."
+        title="Blog"
         descPre={`Atualizado em: ${getDateStr(posts[0].Date)}`}
+        color="#fff"
       />
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
