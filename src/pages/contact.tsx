@@ -28,7 +28,7 @@ const contacts = [
   {
     Comp: Envelope,
     alt: 'envelope icon',
-    link: 'mailto:contato@cgsilva.com.br?subject=Seu',
+    link: 'mailto:contato@cgsilva.com.br?subject=Seu blog.',
   },
 ]
 
