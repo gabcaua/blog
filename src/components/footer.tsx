@@ -6,7 +6,7 @@ export default function Footer() {
         <span>Meu maior projeto.</span>
         <ExtLink href="https://cgsilva.com.br">
           <img
-            src="/listen.svg"
+            src="https://blog.cgsilva.com.br/listen.svg"
             height={46}
             width={132}
             alt="deploy to Vercel button"
