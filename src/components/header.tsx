@@ -16,6 +16,7 @@ const Header = ({
   descPre = '📖 Meu Diário.',
   title = 'Oi, Mundo.',
   image = '/og-image.webp',
+  color = '#83eeff',
 }) => {
   const { pathname } = useRouter()
 
@@ -31,6 +32,7 @@ const Header = ({
         <meta name="twitter:site" content="@gab_caua" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={image} />
+        <meta name="theme-color" content={color} />
       </Head>
       <ul>
         {navItems.map(({ label, page, link }) => (

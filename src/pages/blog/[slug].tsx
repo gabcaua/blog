@@ -140,13 +140,15 @@ const RenderPost = ({ post, redirect, preview }) => {
   const realPreview = post.preview[0]
     .map((x) => (typeof x[0] === 'string' ? x[0] : ''))
     .join('')
+
   return (
     <>
       <Header
         titlePre={post.Page}
         title={post.Page}
-        descPre={`${post.Page} - ${post.Authors.join(', ')} - ${realPreview}`}
-        image={assets[post.Slug].thumbnail}
+        descPre={`${realPreview}`}
+        image={assets[post.Slug]?.thumbnail || '/og-image.webp'}
+        color={assets[post.Slug]?.mainColor || '#83eeff'}
       />
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
