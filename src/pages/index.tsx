@@ -25,12 +25,11 @@ export default function Index() {
 
         <div className="explanation">
           <p>
-            Para reparar os danos de não escrever por taaaaaantos anos, resolvi
-            fazer um blogue, para escrever sobre desde coisas engraçadas e úteis
-            até as coisas idiotas e sem significado. Eu me chamo Cauã Gabriel e
-            sou um Desenvolvedor, Designer e Escritor. Criei a Listen, uma mera
-            robô de música para o Discord, mas que levou 4 anos para chegar
-            aqui. 😅
+            Para reparar os danos de não escrever por tantos anos, resolvi fazer
+            um blogue, pra escrever sobre coisas engraçadas e úteis, ou coisas
+            idiotas e sem significado. Me chamo Cauã Gabriel e sou um
+            Desenvolvedor, Designer e Escritor. E Criei a Listen, uma mera robô
+            de música para o Discord, o que levou 4 anos. 😅
           </p>
 
           <p>
