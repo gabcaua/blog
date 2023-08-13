@@ -13,7 +13,7 @@
 
 .header ul li {
   display: inline-block;
-  padding: 0 15px;
+  padding: 15px 20px;
 }
 
 .header :global(a) {
@@ -24,7 +24,7 @@
 .header :global(a.active) {
   color: #0070f3;
   font-weight: 800;
-  border-bottom: 3px dashed #323232;
+  border-bottom: 2px dashed #323232;
 }
 
 @media (max-width: 600px) {
