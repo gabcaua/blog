@@ -13,6 +13,8 @@ import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
 import { relative } from 'path'
+import { values } from '../../lib/notion/rpc'
+import assets from '../../components/thumbnails.json'
 
 // Get the data for each blog post
 export async function getStaticProps({ params: { slug }, preview }) {
@@ -26,10 +28,11 @@ export async function getStaticProps({ params: { slug }, preview }) {
     console.log(`Failed to find post for slug: ${slug}`)
     return {
       props: {
+        notFound: true,
         redirect: '/blog',
         preview: true,
       },
-      unstable_revalidate: 5,
+      revalidate: 3,
     }
   }
   const postData = await getPageData(post.id)
@@ -78,7 +81,7 @@ export async function getStaticPaths() {
     paths: Object.keys(postsTable)
       .filter((post) => postsTable[post].Published === 'Yes')
       .map((slug) => getBlogLink(slug)),
-    fallback: true,
+    fallback: 'blocking',
   }
 }
 
@@ -130,16 +133,20 @@ const RenderPost = ({ post, redirect, preview }) => {
   if (!post) {
     return (
       <div className={blogStyles.post}>
-        <p>
-          Woops! didn't find that post, redirecting you back to the blog index
-        </p>
+        <p>Erro 404: Redirecionando você de volta.</p>
       </div>
     )
   }
-
+  const realPreview = post.preview[0]
+    .map((x) => (typeof x[0] === 'string' ? x[0] : ''))
+    .join('')
   return (
     <>
-      <Header titlePre={post.Page} />
+      <Header
+        titlePre={post.Page}
+        title={post.Page}
+        descPre={`${post.Page} - ${post.Authors.join(', ')} - ${realPreview}`}
+      />
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
           <div className={blogStyles.previewAlert}>

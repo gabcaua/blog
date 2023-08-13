@@ -35,6 +35,7 @@ export async function getStaticProps({ preview }) {
   const { users } = await getNotionUsers([...authorsToGet])
 
   posts.map((post) => {
+    console.log(post.preview)
     post.Authors = post.Authors.map((id) => users[id].full_name)
   })
 
@@ -50,12 +51,16 @@ export async function getStaticProps({ preview }) {
 const Index = ({ posts = [], preview }) => {
   return (
     <>
-      <Header titlePre="Blog" />
+      <Header
+        titlePre="Blog"
+        title="Blog."
+        descPre={`Atualizado em: ${getDateStr(posts[0].Date)}`}
+      />
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
           <div className={blogStyles.previewAlert}>
-            <b>Note:</b>
-            {` `}Viewing in preview mode{' '}
+            <b>Nota:</b>
+            {` `}Bisbilhotando{' '}
             <Link href={`/api/clear-preview`}>
               <button className={blogStyles.escapePreview}>Exit Preview</button>
             </Link>
@@ -65,7 +70,7 @@ const Index = ({ posts = [], preview }) => {
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
         <h1>No que eu penso:</h1>
         {posts.length === 0 && (
-          <p className={blogStyles.noPosts}>There are no posts yet</p>
+          <p className={blogStyles.noPosts}>não escrevi nada ainda...</p>
         )}
         {posts.map((post) => {
           return (
@@ -88,7 +93,7 @@ const Index = ({ posts = [], preview }) => {
               )}
               <p>
                 {(!post.preview || post.preview.length === 0) &&
-                  'No preview available'}
+                  'Sem descrição.'}
                 {(post.preview || []).map((block, idx) =>
                   textBlock(block, true, `${post.Slug}${idx}`)
                 )}

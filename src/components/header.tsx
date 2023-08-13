@@ -11,23 +11,26 @@ const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Código-fonte', link: 'https://github.com/gabcaua/blog' },
 ]
 
-const ogImageUrl = '/og-image.webp'
-
-const Header = ({ titlePre = '' }) => {
+const Header = ({
+  titlePre = '',
+  descPre = '📖 Meu Diário.',
+  title = 'Oi, Mundo.',
+  image = '/og-image.webp',
+}) => {
   const { pathname } = useRouter()
 
   return (
     <header className={styles.header}>
       <Head>
         <title>{titlePre ? titlePre : 'blog.cgsilva.com.br'}</title>
-        <meta name="description" content="bem-vindo ao meu blogue." />
-        <meta name="og:description" content="bem-vindo ao meu blogue." />
-        <meta name="description" content="bem-vindo ao meu blogue." />
-        <meta name="og:title" content="Oi, Mundo." />
-        <meta property="og:image" content={ogImageUrl} />
+        <meta name="description" content={descPre} />
+        <meta name="og:description" content={descPre} />
+        <meta name="description" content={descPre} />
+        <meta name="og:title" content={title} />
+        <meta property="og:image" content={image} />
         <meta name="twitter:site" content="@gab_caua" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={ogImageUrl} />
+        <meta name="twitter:image" content={image} />
       </Head>
       <ul>
         {navItems.map(({ label, page, link }) => (
