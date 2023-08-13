@@ -1,5 +1,4 @@
 import ExtLink from './ext-link'
-import Listen from '../../public/listen'
 export default function Footer() {
   return (
     <>
