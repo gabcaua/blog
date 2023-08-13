@@ -11,10 +11,14 @@ export default async function getNotionUsers(ids: string[]) {
   const users: any = {}
 
   for (const result of results) {
+    console.log(result)
     const { value } = result || { value: {} }
-    const { given_name, family_name } = value
+    const { name, given_name, family_name } = value
     let full_name = given_name || ''
 
+    if (name) {
+      full_name = `${name}`
+    }
     if (family_name) {
       full_name = `${full_name} ${family_name}`
     }

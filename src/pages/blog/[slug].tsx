@@ -12,6 +12,7 @@ import React, { CSSProperties, useEffect } from 'react'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
+import { relative } from 'path'
 
 // Get the data for each blog post
 export async function getStaticProps({ params: { slug }, preview }) {
@@ -26,7 +27,7 @@ export async function getStaticProps({ params: { slug }, preview }) {
     return {
       props: {
         redirect: '/blog',
-        preview: false,
+        preview: true,
       },
       unstable_revalidate: 5,
     }
@@ -153,10 +154,10 @@ const RenderPost = ({ post, redirect, preview }) => {
       <div className={blogStyles.post}>
         <h1>{post.Page || ''}</h1>
         {post.Authors.length > 0 && (
-          <div className="authors">By: {post.Authors.join(' ')}</div>
+          <div className="authors">por {post.Authors.join(', ')}</div>
         )}
         {post.Date && (
-          <div className="posted">Posted: {getDateStr(post.Date)}</div>
+          <div className="posted">Postado: {getDateStr(post.Date)}</div>
         )}
 
         <hr />
@@ -345,9 +346,7 @@ const RenderPost = ({ post, redirect, preview }) => {
                 child = (
                   <Comp
                     key={!useWrapper ? id : undefined}
-                    src={`/api/asset?assetUrl=${encodeURIComponent(
-                      display_source as any
-                    )}&blockId=${id}`}
+                    src={`${decodeURIComponent(display_source as any)}`}
                     controls={!isImage}
                     alt={`An ${isImage ? 'image' : 'video'} from Notion`}
                     loop={!isImage}

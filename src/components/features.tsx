@@ -8,36 +8,36 @@ import Edit from './svgs/edit'
 import Scroll from './svgs/scroll'
 
 const features = [
+  /* {
+      text: 'Blazing fast',
+      icon: Lightning,
+    },
+    {
+      text: 'JAMstack based',
+      icon: Jamstack,
+    },
+    {
+      text: 'Always available',
+      icon: Wifi,
+    },
+    {
+      text: 'Customizable',
+      icon: Edit,
+    }, */
   {
-    text: 'Blazing fast',
-    icon: Lightning,
-  },
-  {
-    text: 'JAMstack based',
-    icon: Jamstack,
-  },
-  {
-    text: 'Always available',
-    icon: Wifi,
-  },
-  {
-    text: 'Customizable',
-    icon: Edit,
-  },
-  {
-    text: 'Incremental SSG',
+    text: 'Automaticamente Escalável',
     icon: Plus,
   },
-  {
-    text: 'MIT Licensed',
+  /* {
+    text: 'No Git',
     icon: Scroll,
-  },
+  }, */
   {
-    text: 'Edit via Notion',
+    text: 'Baseado no Notion',
     icon: Notion,
   },
   {
-    text: 'Great scores',
+    text: 'Otimizado para Celulares',
     icon: Lighthouse,
   },
 ]

@@ -36,6 +36,7 @@ export default async function notionApi(
       res.end()
     }
   } catch (error) {
+    console.log(error)
     handleError(res, error)
   }
 }

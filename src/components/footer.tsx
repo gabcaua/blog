@@ -1,22 +1,22 @@
 import ExtLink from './ext-link'
-
+import Listen from '../../public/listen'
 export default function Footer() {
   return (
     <>
       <footer>
-        <span>Deploy your own!</span>
-        <ExtLink href="https://vercel.com/new/git/external?repository-url=https://github.com/ijjk/notion-blog/tree/main&project-name=notion-blog&repository-name=notion-blog">
+        <span>Meu maior projeto.</span>
+        <ExtLink href="https://cgsilva.com.br">
           <img
-            src="https://vercel.com/button"
+            src="/listen.svg"
             height={46}
             width={132}
             alt="deploy to Vercel button"
           />
         </ExtLink>
         <span>
-          or{' '}
-          <ExtLink href="https://github.com/ijjk/notion-blog">
-            view source
+          ou{' '}
+          <ExtLink href="https://www.youtube.com/@cn_estudios">
+            veja meu estúdio
           </ExtLink>
         </span>
       </footer>
