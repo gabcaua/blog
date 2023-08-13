@@ -47,8 +47,8 @@ export default function Contact() {
           <img
             src="/logo.svg"
             alt="logo with letters CG"
-            height={60}
-            width={60}
+            height={120}
+            width={120}
           />
         </div>
 
