@@ -146,6 +146,7 @@ const RenderPost = ({ post, redirect, preview }) => {
         titlePre={post.Page}
         title={post.Page}
         descPre={`${post.Page} - ${post.Authors.join(', ')} - ${realPreview}`}
+        image={assets[post.Slug].thumbnail}
       />
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
