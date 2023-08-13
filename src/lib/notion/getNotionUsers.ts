@@ -11,7 +11,7 @@ export default async function getNotionUsers(ids: string[]) {
   const users: any = {}
 
   for (const result of results) {
-    console.log(result)
+    //console.log(result)
     const { value } = result || { value: {} }
     const { name, given_name, family_name } = value
     let full_name = given_name || ''

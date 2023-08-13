@@ -8,12 +8,7 @@ export default function Index() {
     <>
       <Header titlePre="Início" />
       <div className={sharedStyles.layout}>
-        <img
-          src="/vercel-and-notion.png"
-          height="85"
-          width="250"
-          alt="Foto conceitual."
-        />
+        <img src="/logo.webp" height="85" width="85" alt="Foto conceitual." />
         <h1>Oi, Mundo.</h1>
         <h2>
           Meu diário. <br />{' '}

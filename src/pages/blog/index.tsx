@@ -35,7 +35,7 @@ export async function getStaticProps({ preview }) {
   const { users } = await getNotionUsers([...authorsToGet])
 
   posts.map((post) => {
-    console.log(post.preview)
+    //console.log(post.preview)
     post.Authors = post.Authors.map((id) => users[id].full_name)
   })
 
