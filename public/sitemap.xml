@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://blog.cgsilva.com.br/</loc>
+        <lastmod>2023-08-13</lastmod>
+        <priority>1</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.cgsilva.com.br/contact</loc>
+        <lastmod>2023-08-13</lastmod>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.cgsilva.com.br/blog/</loc>
+        <lastmod>2023-08-13</lastmod>
+        <priority>1</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+    <url>
+        <loc>https://blog.cgsilva.com.br/blog/solitaire</loc>
+        <lastmod>2023-08-13</lastmod>
+        <priority>0.9</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+</urlset>
